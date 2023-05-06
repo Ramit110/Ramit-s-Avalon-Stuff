@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="./bootstrap/bootstrap.min.css" rel="stylesheet" >
+        <link href="./bootstrap/sidebars.css" rel="stylesheet" >
+
+        <title>Ramit's Avalon Stuff</title>
+    </head>
+    
+    <body>
+        <main class="d-flex flex-nowrap">
+            <div class="flex-shrink-0 p-3" style="width: 280px;">
+            <a href="./index.html" class="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
+                <span class="fs-5 fw-semibold">Ramit's Avalon Stuff</span>
+            </a>
+            <ul class="list-unstyled ps-0">
+                <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-menu" aria-expanded="true">
+                    General
+                </button>
+                <div class="collapse show" id="home-menu">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="/" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Home</a></li>
+                    <li><a href="..." class="link-body-emphasis d-inline-flex text-decoration-none rounded">Changelog</a></li>
+                    <li><a href="..." class="link-body-emphasis d-inline-flex text-decoration-none rounded">Contribute</a></li>
+                    <li><a href="..." class="link-body-emphasis d-inline-flex text-decoration-none rounded">Report Bugs</a></li>
+                </ul>
+                </div>
+            </li>
+            <li class="mb-1">
+                <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#pets-menu" aria-expanded="false">
+                    Pets
+                </button>
+                <div class="collapse" id="pets-menu">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li><a href="./pets/index.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Basic Training Guides</a></li>
+                    <li><a href="./pets/copper.html" class="link-body-emphasis d-inline-flex text-decoration-none rounded">Copper Hoppers</a></li>
+                </ul>
+                </div>
+            </li>
+            </ul>
+        </div>
+    </main>
+    <script src="./bootstrap/bootstrap.min.js"></script>
+    <script src="./bootstrap/sidebars.js"></script>
+    </body>
+</html>
