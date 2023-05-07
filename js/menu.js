@@ -60,6 +60,15 @@ class elementBuilder {
     }
 }
 
+function getURLFromDepth(url) {
+    const depth = localStorage.getItem("depth");
+    let prefix = depth == 0 ? "./" : "../";
+    for(x = 1; x < depth; x++) {
+        prefix += "../";
+    }
+    return prefix + url;
+}
+
 function makeCollapsableMenuSegment(segmentName, divID, isShow, linkingButtons) {
     let buttonClasses = ["btn", "btn-toggle", "d-inline-flex",
         "align-items-center", "rounded", "border-0"];
@@ -109,7 +118,7 @@ function makeMenu() {
                 .createChild("a")
                 .addClasses(["d-flex", "align-items-center", "pb-3", "mb-3",
                     "link-body-emphasis", "text-decoration-none", "border-bottom"])
-                .setAttribute('href', './index.html')
+                .setAttribute('href', getURLFromDepth('./index.html'))
                     .createChild("span")
                     .addClasses(["fs-5", "fw-semibold"])
                     .setInnerHTML("Ramit's Avalon Stuff")
@@ -120,14 +129,14 @@ function makeMenu() {
                 .addClasses(["list-unstyled", "ps-0"])
                 .addChild(makeCollapsableMenuSegment(
                     "General", "home-menu", true,
-                    [["./index.html", "Home"],
+                    [[getURLFromDepth("index.html"), "Home"],
                      ["https://github.com/Ramit110/avalon/wiki/Bug-Reporting", "Contribute"],
                      ["https://github.com/Ramit110/avalon/wiki/Contributing", "Report Bugs"]]
                 ).getNode())
                 .addChild(makeCollapsableMenuSegment(
                     "Pets", "pets-menu", false,
-                    [["./pets/index.html", "Basic Training Guides"],
-                     ["./pets/copper.html", "Copper Hoppers"]]
+                    [[getURLFromDepth("pets/index.html"), "Basic Training Guides"],
+                     [getURLFromDepth("pets/copper.html"), "Copper Hoppers"]]
                 ).getNode())
                 .getParent()
             .getParent()
