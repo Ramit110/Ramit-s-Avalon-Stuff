@@ -141,5 +141,5 @@ function makeMenu() {
                 .getParent()
             .getParent()
         .getNode();
-    document.body.appendChild(main);
+    document.getElementById("main").insertBefore(main, document.getElementById("content"));
 }
