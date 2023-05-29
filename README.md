@@ -1,2 +1,29 @@
 # Ramit's Avalon Stuff
-...
+
+Page template:
+
+```html
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link href="./bootstrap/bootstrap.min.css" rel="stylesheet" >
+        <link href="./bootstrap/sidebars.css" rel="stylesheet" >
+        <script>localStorage.setItem("depth", 0)</script>
+
+        <title>Ramit's Avalon Stuff</title>
+    </head>
+    
+    <body>
+        <script src="./js/menu.js"></script>
+        <script src="./bootstrap/bootstrap.min.js"></script>
+        <script src="./bootstrap/sidebars.js"></script>
+        <main id="main" class="d-flex flex-nowrap">
+            <script>localStorage.setItem("depth", 1)</script>
+            <script src="./js/menu.js"></script>
+            <div id="content" class="container-fluid">
+            </div>
+        </main>
+    </body>
+</html>
+```

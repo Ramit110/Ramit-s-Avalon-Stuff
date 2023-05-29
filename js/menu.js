@@ -130,6 +130,7 @@ function makeMenu() {
                 .addChild(makeCollapsableMenuSegment(
                     "General", "home-menu", true,
                     [[getURLFromDepth("index.html"), "Home"],
+                     [getURLFromDepth("/sheets/indexhtml"), "Monster Sheets"],
                      ["https://github.com/Ramit110/avalon/wiki/Bug-Reporting", "Contribute"],
                      ["https://github.com/Ramit110/avalon/wiki/Contributing", "Report Bugs"]]
                 ).getNode())
