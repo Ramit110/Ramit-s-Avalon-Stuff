@@ -62,7 +62,7 @@ class elementBuilder {
 
 function getURLFromDepth(url) {
     const depth = localStorage.getItem("depth");
-    let prefix = depth == 0 ? "./" : "../";
+    let prefix = depth == 0 ? "../avalon/" : "../";
     for(x = 1; x < depth; x++) {
         prefix += "../";
     }
@@ -130,7 +130,7 @@ function makeMenu() {
                 .addChild(makeCollapsableMenuSegment(
                     "General", "home-menu", true,
                     [[getURLFromDepth("index.html"), "Home"],
-                     [getURLFromDepth("/sheets/indexhtml"), "Monster Sheets"],
+                     [getURLFromDepth("sheets/index.html"), "Monster Sheets"],
                      ["https://github.com/Ramit110/avalon/wiki/Bug-Reporting", "Contribute"],
                      ["https://github.com/Ramit110/avalon/wiki/Contributing", "Report Bugs"]]
                 ).getNode())
